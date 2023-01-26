@@ -1,6 +1,7 @@
 /* CUSTOM PROPS */
 :root{
     --primary-color: #ea625c;
+    --primary-dark: #c9514c;
     --text-color: #333;
     --font-text: ;
     --font-heding: ;
@@ -38,6 +39,11 @@ img{
     height: auto;
 }
 
+*:focus{
+    outline: 2px dashed var(--primary-color);
+    outline-offset: 2px;
+}
+
 /* CONTAINER */
 .container{
     width: 100%;
@@ -48,6 +54,30 @@ img{
     margin-right: auto;
 }
 
+
+/* BUTTON */
+.button{
+    display: inline-block;
+    padding: 12px 38px;
+    bottom: 0;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover{
+    background-color: var(--primary-dark)
+}
+
+.button:active{
+    opacity: 0.6;
+}
 .main-content{
     flex-grow: 1;
 }
@@ -58,6 +88,7 @@ img{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
 .site-header-container {
     display: flex;
     align-items: center;
@@ -118,8 +149,59 @@ img{
 /* SEARCH FORM */
 
 .search-form-input {
+    outline: 0;
     border: 0;
     padding-top: 6px;
     padding-bottom: 6px;
     border-bottom: 1px solid #333;
+}
+
+
+/* MAIN CONTENT */
+.hero {
+    padding-top: 140px;
+    padding-bottom: 183px;
+    border-bottom: 2px solid #ddd;
+    background-image: url("../img/watch-bg.png");
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 620px) bottom;
+
+}
+
+
+/* LEAD CTA */
+.lead-cta {
+    width: 100%;
+    max-width: 490px;
+}
+
+.lead-cta-heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.lead-cta-text {
+    padding-left: 37px;
+    border-left: 3px solid #888;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+
+/* RETINA BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    .hero {
+        background-image: url("../img/watch-bg.png");
+
+    }
 }
