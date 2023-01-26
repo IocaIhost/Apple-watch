@@ -3,8 +3,6 @@
     --primary-color: #ea625c;
     --primary-dark: #c9514c;
     --text-color: #333;
-    --font-text: ;
-    --font-heding: ;
 }
 
 html{
@@ -27,9 +25,9 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    font-family: "Roboto", "Arial" sans-serif;
     background-color: #fff;
     color: var(--text-color);
 }
@@ -78,9 +76,39 @@ img{
 .button:active{
     opacity: 0.6;
 }
+
 .main-content{
     flex-grow: 1;
 }
+
+
+/* LINED LINK */
+
+.lined-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.lined-link::before {
+    content: '';
+    width: 40px;
+    height: 3px;
+    border: 0;
+    background-color: var(--primary-color);
+    margin-right: 10px;
+    transition: width 0.3s ease;
+}
+
+.lined-link:hover::before {
+    width: 60px;
+}
+
 
 /* SITE HEADER */
 
@@ -97,7 +125,6 @@ img{
 .site-header-logo {
     margin-right: auto;
     transition: opacity 0.3s ease;
-
 }
 
 .site-header-logo:hover{
@@ -183,6 +210,7 @@ img{
     color: #000;
 }
 
+
 .lead-cta-text {
     padding-left: 37px;
     border-left: 3px solid #888;
@@ -190,6 +218,66 @@ img{
     margin-bottom: 30px;
     color: #777;
 }
+
+
+/* FEATURES */
+
+.features {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.features-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.features-item {
+    width: 280px;
+}
+
+.features-item:not(:last-child) {
+    margin-right: 80px;
+}
+
+.features-heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #222;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.features-text {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.features-devider {
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border: 0;
+    background-color: #ddd;
+    box-shadow: 16px 0 0 0 #ddd,
+                32px 0 0 0 #ddd;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* RETINA BG */
